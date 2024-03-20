@@ -1,0 +1,61 @@
+{
+  "name": "delenitialiquam",
+  "description": "A bunch of additional VeeValidate rules for eth addresses' validation.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "author": "BrendanYundt",
+  "keywords": [
+    "aliquam",
+    "aut",
+    "qui",
+    "rules"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.26.2",
+    "@antfu/ni": "^0.17.2",
+    "eslint": "^8.23.0",
+    "lint-staged": ">=10",
+    "semantic-release": "^19.0.2",
+    "simple-git": "^2.47.0",
+    "simple-git-hooks": "^2.7.0",
+    "typescript": "^4.8.4",
+    "unbuild": "^0.7.4",
+    "vitest": "^0.24.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BreanaRyan/delenitialiquam.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "nr lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue}": [
+      "eslint --fix"
+    ],
+    "*.{css,scss,sass,html,vue}": [
+      "stylelint --fix"
+    ]
+  },
+  "homepage": "https://github.com/BreanaRyan/delenitialiquam.git"
+}
